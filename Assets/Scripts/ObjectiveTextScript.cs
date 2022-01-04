@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ObjectiveTextScript : MonoBehaviour
 {    
@@ -18,6 +15,6 @@ public class ObjectiveTextScript : MonoBehaviour
 
     void Init(ObjectiveData data)
     {
-        GetComponent<TMPro.TextMeshProUGUI>().text = data.objective;
+        GetComponent<TMPro.TextMeshProUGUI>().text = data.Objective;
     }
 }

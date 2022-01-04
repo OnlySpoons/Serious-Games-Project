@@ -4,13 +4,13 @@ using UnityEngine;
 using RoslynCSharp;
 using System.IO;
 using System;
-using UnityEngine.Assertions;
 
 public class CompilerScript : MonoBehaviour
 {
+    [HideInInspector]
     public string output;
-    private ScriptDomain domain = null;
 
+    private ScriptDomain domain = null;
     private ConsoleManagerScript consoleManager;
 
     public void Init()
@@ -37,17 +37,21 @@ public class CompilerScript : MonoBehaviour
 
     public bool Run(ScriptType type)
     {
+        if(type is null)
+            return false;
+
         ScriptProxy proxy = type.CreateInstance(gameObject);
 
-        var stringReader = new StringReader(GameManagerScript.currentObjective.input);
+        var stringReader = new StringReader(GameManagerScript.CurrentObjective.Input);
         Console.SetIn(stringReader);
         var stringWriter = new StringWriter();
         Console.SetOut(stringWriter);
 
         proxy.Call("Main");
 
-        consoleManager.WriteToOutput(stringWriter.ToString());
+        var output = stringWriter.ToString().Trim('\r','\n');
+        consoleManager.WriteToOutput(output);
 
-        return GameManagerScript.currentObjective.expectedOutput == stringWriter.ToString();
+        return GameManagerScript.CurrentObjective.ExpectedOutput == output;
     }
 }

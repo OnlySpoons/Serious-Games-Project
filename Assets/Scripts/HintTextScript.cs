@@ -1,13 +1,12 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class HintTextScript : MonoBehaviour
 {
     public List<TMPro.TextMeshProUGUI> hintList;
 
-    public static int index;
+    private static int hintsUsed;
+    public static int HintsUsed => hintsUsed;
 
     private void OnEnable()
     {
@@ -22,20 +21,20 @@ public class HintTextScript : MonoBehaviour
 
     void Init(ObjectiveData data)
     {
-        index = 0;
+        hintsUsed = 0;
 
         for(int i = 0; i < hintList.Count; i++)
         {
-            hintList[i].text = data.hints[i];
+            hintList[i].text = data.Hints[i];
             hintList[i].enabled = false;
         }
     }
 
     public void OnClick()
     {
-        if (index >= hintList.Count)
+        if (hintsUsed >= hintList.Count)
             return;
 
-        hintList[index++].enabled = true;
+        hintList[hintsUsed++].enabled = true;
     }
 }

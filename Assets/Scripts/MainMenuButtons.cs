@@ -1,9 +1,5 @@
-﻿//Default
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-
-//Added for scripting
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -12,54 +8,60 @@ using TMPro;
 public class MainMenuButtons : MonoBehaviour
 {
     //Initialises variables
-    public AudioMixer m_audioMixer;
-    public TMP_Dropdown m_resolutionDropdown;
-    public TMP_Dropdown m_qualityDropdown;
+    [SerializeField]
+    private AudioMixer audioMixer;
+    [SerializeField]
+    private TMP_Dropdown resolutionDropdown;
+    [SerializeField]
+    private TMP_Dropdown qualityDropdown;
+    [SerializeField]
+    private Slider volumeSlider;
+    [SerializeField]
+    private Toggle fullscreenToggle;
 
-    Resolution[] m_resolutionsArray;
+    Resolution[] resolutionsArray;
 
-    //Runs before program loads
     void Start()
     {
-        //Adds all current resolutions on computer to array
-        m_resolutionsArray = Screen.resolutions;
+        fullscreenToggle.isOn = Screen.fullScreen;
+        resolutionsArray = Screen.resolutions;
+        resolutionDropdown.ClearOptions();
 
-        //Clears out previous resolutions from unity dropdown
-        m_resolutionDropdown.ClearOptions();
-
-        //Creates string list to pass into AddOptions
         List<string> optionsTemp = new List<string>();
 
         int currentResolutionIndex = 0;
 
-        //Loops through array adding options to string list
-        for(int i = 0; i < m_resolutionsArray.Length; i++)
+        for(int i = 0; i < resolutionsArray.Length; i++)
         {
-            string option = m_resolutionsArray[i].width + " x " + m_resolutionsArray[i].height;
+            string option = resolutionsArray[i].width + " x " + resolutionsArray[i].height;
             optionsTemp.Add(option);
 
-            //Checks if current i = current screen resolution and makes it the dropdown default
-            if(m_resolutionsArray[i].width == Screen.width && 
-                m_resolutionsArray[i].height == Screen.height)
+            if(resolutionsArray[i].width == Screen.width && 
+                resolutionsArray[i].height == Screen.height)
             {
                 currentResolutionIndex = i;
             }
         }
 
-        //Add filled string list to array
-        m_resolutionDropdown.AddOptions(optionsTemp);
-        m_resolutionDropdown.value = currentResolutionIndex;
-        m_resolutionDropdown.RefreshShownValue();
+        resolutionDropdown.AddOptions(optionsTemp);
+        resolutionDropdown.value = currentResolutionIndex;
+        resolutionDropdown.RefreshShownValue();
 
-        //Auto sets quality dropdown
-        m_qualityDropdown.value = QualitySettings.GetQualityLevel();
-        m_qualityDropdown.RefreshShownValue();
+        qualityDropdown.value = QualitySettings.GetQualityLevel();
+        qualityDropdown.RefreshShownValue();
+    }
+
+    void OnEnable()
+    {
+        volumeSlider.value = GameSettingsScript.Volume;
+        fullscreenToggle.isOn = GameSettingsScript.IsFullscreen;
+
+        SetVolume(GameSettingsScript.Volume);
     }
 
     public void PlayGame()
     {
         SceneManager.LoadScene(1);
-
         AudioManager.m_instance.StopPlaying("MenuMusic");
     }
 
@@ -75,24 +77,25 @@ public class MainMenuButtons : MonoBehaviour
 
     public void SetVolume(float _volume)
     {
-        m_audioMixer.SetFloat("VolumeParam", _volume);
+        audioMixer.SetFloat("VolumeParam", _volume);
+        GameSettingsScript.Volume = volumeSlider.value;
     }
 
     public void SetQuality(int _qualityIndex)
     {
-        _qualityIndex = m_qualityDropdown.value;
+        _qualityIndex = qualityDropdown.value;
         QualitySettings.SetQualityLevel(_qualityIndex);
     }
 
     public void SetFullscreen(bool _isFullscreen)
     {
         Screen.fullScreen = _isFullscreen;
+        GameSettingsScript.IsFullscreen = fullscreenToggle.isOn;
     }
 
     public void SetResolution(int _resolutionIndex)
     {
-        Resolution resolution = m_resolutionsArray[_resolutionIndex];
-
+        Resolution resolution = resolutionsArray[_resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 }

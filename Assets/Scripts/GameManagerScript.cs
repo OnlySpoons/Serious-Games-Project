@@ -1,25 +1,34 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameManagerScript : MonoBehaviour
 {
     public delegate void OnObjectiveChanged(ObjectiveData data);
     public static event OnObjectiveChanged onObjectiveChanged;
 
-    public static ObjectiveData currentObjective;
-    public List<ObjectiveData> objectives;
-    public TMPro.TextMeshProUGUI scoreText, questionText;
+    private static ObjectiveData currentObjective;
+    public static ObjectiveData CurrentObjective => currentObjective;
+
+    [SerializeField]
+    private List<ObjectiveData> objectives;
+    [SerializeField]
+    private TMPro.TextMeshProUGUI scoreText, questionText;
 
     private ConsoleManagerScript consoleManager;
     private CompilerScript compiler;
 
+    [SerializeField]
+    private Canvas gameWindow, popupWindow;
+
     private int score = 0;
+    public int Score => score;
+
     private int questionNum = 0;
 
     void Start()
     {
+        AudioManager.m_instance.Play("GameMusic");
+
         consoleManager = GetComponent<ConsoleManagerScript>();
         compiler = GetComponent<CompilerScript>();
 
@@ -35,33 +44,18 @@ public class GameManagerScript : MonoBehaviour
             onObjectiveChanged(currentObjective);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void OnRun()
     {
-        //string source =
-        // "using System;" +
-        // "class Test" +
-        // "{" +
-        // " void Main()" +
-        // " {" +
-        // " Console.WriteLine(\"Hello World!\");" +
-        // " }" +
-        // "}";
+        // Clear output window
+        consoleManager.ClearOutput();
 
         // Compile code
-        //var type = compiler.Compile(source);
         var type = compiler.Compile(consoleManager.ReadFromInput());
 
         // Check for errors and display any
         if (type is null)
         {
             consoleManager.WriteToOutput(compiler.output);
-            return;
         }
 
         // Run compiled code
@@ -69,15 +63,30 @@ public class GameManagerScript : MonoBehaviour
 
         // If correct, add score
         if (!correct)
+        {
+            consoleManager.WriteToOutput("Output does not match expected output!");
             return;
+        }
 
-        score += 20 - (5 * (HintTextScript.index + 1));
+        var scoreToAdd = 20 - (5 * (HintTextScript.HintsUsed));
+
+        gameWindow.GetComponent<CanvasGroup>().interactable = false;
+        popupWindow.enabled = true;
+        popupWindow.GetComponent<PopupScript>().Init(scoreToAdd, HintTextScript.HintsUsed);
+
+        score += scoreToAdd;
         scoreText.text = $"Score: {score}";
+    }
+
+    public void OnLoadNextObjective()
+    {
+        popupWindow.enabled = false;
+        gameWindow.GetComponent<CanvasGroup>().interactable = true;
 
         // Load next obj
         if (++questionNum >= objectives.Count)
         {
-            // End program, return to menu scene(?)
+            // TODO: End program, return to menu scene(?)
             return;
         }
 
@@ -88,5 +97,8 @@ public class GameManagerScript : MonoBehaviour
         // Calls onObjectiveChanged event
         if (onObjectiveChanged != null)
             onObjectiveChanged(currentObjective);
+
+        consoleManager.ClearInput();
+        consoleManager.ClearOutput();
     }
 }
