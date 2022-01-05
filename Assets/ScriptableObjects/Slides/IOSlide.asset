@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510a493f6cb6dd2499cee5294b160755, type: 3}
+  m_Name: IOSlide
+  m_EditorClassIdentifier: 
+  slideTitle: Interacting with the console
+  slideContents: "Before you write your first program, you'll need to know how to
+    interact with the console. \n\nIn/Out interactions are provided by accessing
+    C#'s standard library of useful functions. To access the console, we must have
+    access to the System library. This can be done by making use of the using keyword.
+    \n\nOnce that's done, we can declare the following code inside our Main function:\n\n<color=green>Console</color>.<color=yellow>WriteLine</color>(<color=orange>\"Hello
+    World!\"</color>);\n\nThe full stop after the Console allows us to access the
+    WriteLine function, to which we provide a string with the text we want to print
+    out. \n\nNow you're ready to combine all of these techniques and create your
+    first program..."

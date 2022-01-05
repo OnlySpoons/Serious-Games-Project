@@ -18,7 +18,7 @@ public class GameManagerScript : MonoBehaviour
     private CompilerScript compiler;
 
     [SerializeField]
-    private Canvas gameWindow, popupWindow;
+    private Canvas gameWindow, popupWindow, slidesWindow;
 
     private int score = 0;
     public int Score => score;
@@ -42,6 +42,8 @@ public class GameManagerScript : MonoBehaviour
         // Calls onObjectiveChanged event
         if (onObjectiveChanged != null)
             onObjectiveChanged(currentObjective);
+
+        slidesWindow.enabled = true;
     }
 
     public void OnRun()
@@ -100,5 +102,8 @@ public class GameManagerScript : MonoBehaviour
 
         consoleManager.ClearInput();
         consoleManager.ClearOutput();
+
+        slidesWindow.enabled = true;
+        GetComponent<SlideManagerScript>().Init();
     }
 }

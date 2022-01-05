@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510a493f6cb6dd2499cee5294b160755, type: 3}
+  m_Name: FunctionsSlide
+  m_EditorClassIdentifier: 
+  slideTitle: Functions
+  slideContents: "To define a function, you must provide a return type. This specifies
+    what value the compiler expects the function to return once it has executed its
+    code. For C#, we can use the type \"void\" - which specifies that nothing will
+    be returned. \n\nFunctions can also be provided with arguments. These arguments
+    can then be referenced inside the scope of the function. To create an argument,
+    you must provide its type and a name.\n\n<color=#0000a0ff>bool</color> <color=yellow>MyFunction</color>(<color=#0000a0ff>string</color>
+    <color=#00ffffff>myText</color>)\n{\n     <color=#ff00ffff>return</color> <color=#00ffffff>myText</color>
+    == <color=orange>\"Hello!\"</color>;\n}\n\nThis function will check if the text
+    passed to the function matches \"Hello!\". If it does, true will be returned
+    as a bool, otherwise false will be returned. "

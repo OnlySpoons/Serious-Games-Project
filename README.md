@@ -2,7 +2,20 @@
  
 ### Change Log:
 
-Change Log - 04/01/2022
+Change Log - 05/01/2022 - Thomas 
+- Refactored UI for the whole project
+	- Gave the main menu and options menu its own background image in the main menu scene
+	- Changed game title 
+	- Changed various panel images to be more appropriate
+	- Changed almost every button/text colour
+
+Change Log - 05/01/2022 - Martin 
+- Added slides panel
+	- Previous, next and finish buttons for navigating slide shows
+- Refactored objective scripts 
+- Fixed various bugs with scripts
+
+Change Log - 04/01/2022 - Thomas & Martin
 - Added main menu scene 
 	- Start game button 
 	- Options menu button
@@ -19,7 +32,7 @@ Change Log - 04/01/2022
 - Fixed issue with fullscreen settings not saving between application sessions
 	- Volume intentionally doesn't save
 
-Change Log - 03/01/2022
+Change Log - 03/01/2022 - Thomas
 - Initial commit
 - Implemented game scene
 	- Input console using Roslyn to compile at runtime

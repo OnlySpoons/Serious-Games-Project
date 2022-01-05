@@ -47,7 +47,7 @@ public class CompilerScript : MonoBehaviour
         var stringWriter = new StringWriter();
         Console.SetOut(stringWriter);
 
-        proxy.Call("Main");
+        proxy.Call("Main", new string[1]);
 
         var output = stringWriter.ToString().Trim('\r','\n');
         consoleManager.WriteToOutput(output);

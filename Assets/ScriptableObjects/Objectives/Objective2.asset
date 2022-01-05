@@ -19,3 +19,6 @@ MonoBehaviour:
   - kys
   - kyda
   - kymaw
+  slides:
+  - {fileID: 11400000, guid: 2796343b7df93f3459fcfa57c05a9c68, type: 2}
+  - {fileID: 11400000, guid: 2cb570f0119358449823ce0f51849b79, type: 2}

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu( fileName = "SlideContents", menuName = "ScriptableObject/SlideContents" )]
+[CreateAssetMenu( fileName = "SlideData", menuName = "ScriptableObject/SlideData")]
 public class SlideData : ScriptableObject
 {
     [SerializeField]
@@ -12,6 +12,5 @@ public class SlideData : ScriptableObject
     private string slideContents;
 
     public string Title => slideTitle;
-
     public string Contents => slideContents;
 }

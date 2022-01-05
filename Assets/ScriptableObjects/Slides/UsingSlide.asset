@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510a493f6cb6dd2499cee5294b160755, type: 3}
+  m_Name: UsingSlide
+  m_EditorClassIdentifier: 
+  slideTitle: '"using" keyword'
+  slideContents: "The \"using\" keyword allows the user to access libraries from
+    various external locations. For the most part, we will be using this keword to
+    access standard libraries that come with C#. \n\nFor example, if we wanted to
+    print a message to the console, we would use the following syntax at the top
+    of the file:\n\n<color=#0000a0ff>using</color> System;\n\nThis will alllow us
+    to call the <color=green>Console</color>.<color=yellow>WriteLine</color>() method/function,
+    which would not be accessible otherwise. "

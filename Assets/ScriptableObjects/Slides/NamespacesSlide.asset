@@ -13,17 +13,11 @@ MonoBehaviour:
   m_Name: NamespacesSlide
   m_EditorClassIdentifier: 
   slideTitle: Namespaces
-  slideContents: 'Namespaces are a container for other things in a project. They
-    can include Classes, Structures and even other Namespaces (which would be a nested
-    Namespace). This is written as shown below:
-
-
-    namespace HelloWorld
-
-    {
-
-    }
-
-
-    The
-    inside of the curly braces contains the code within the given namespace.'
+  slideContents: "Namespaces are used to organise and provide a level of separation
+    for code. Put simply, they are a container which can hold classes, structures,
+    or other namespaces. \n\nTo define a namespace, you must provide a name as an
+    identifier:\n\n<color=#0000a0ff>namespace</color> MyNamespace\n{\n}\n\nThe curly
+    braces denote the scope of the namespace. \n\nIt should also be noted that C#
+    mandates the use of namespaces in most cases. This is not true for some things
+    such as Unity scripting and single-file projects - where the namespace will be
+    inferred. "

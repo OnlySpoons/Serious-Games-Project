@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: ClassesSlide
   m_EditorClassIdentifier: 
   slideTitle: Classes
-  slideContents: "Since C# is an Object-Orientated programming language, sections
-    of code are placed inside Classes, as shown below\r:\n\nclass Hello \n{\n}\r\n\nLike
-    with namespaces, the braces contain the class' code.\r\n"
+  slideContents: "C# is an Object-Orientated programming language. This means that
+    the design of the program is organised around data or objects, instead of functions
+    and logic. Though this sounds complicated, it simply means that all code must
+    be within a class. \n\nClasses, like namespaces, need a name as an identifier:\n\n<color=#0000a0ff>class</color>
+    <color=yellow>MyClass</color> \n{\n}\r\n\nLike with namespaces, the braces contains 
+    the scope of the class' member variables and methods/functions."

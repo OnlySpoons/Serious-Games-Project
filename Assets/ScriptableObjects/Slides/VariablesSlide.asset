@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510a493f6cb6dd2499cee5294b160755, type: 3}
+  m_Name: VariablesSlide
+  m_EditorClassIdentifier: 
+  slideTitle: Variables
+  slideContents: "A variable is an instance of an object. They can be used to store
+    data which can be referred to later in the code. Some of the most common inbuilt
+    C# types are:\r\n\n<color=#0000a0ff>int</color> - Defines an integer, it stores
+    whole numbers which can be \"signed\" or \"unsigned\". Signed integers can be
+    positive or negative, and range between -2,147,483,648 and 2,147,483,647. Unisgned
+    integers cannot be negative, and store values between 0 and 4, 294,967,295. \n\n<color=#0000a0ff>float</color>
+    - Defines a floating-point number. It can be either positive or negative and
+    it can represent up to 45 decimal places. It can also represent scientific notation
+    for large numbers. \n\n<color=#0000a0ff>char</color> - Used for single UTF-16
+    characters. Simply, single-width characters which can represent 1,112,064 Unicode
+    characters. These include alphanumeric and special characters (+, *, #, etc.)
+    To represent a char in code, use single quotation marks.\n\n<color=#0000a0ff>string</color>
+    - They are essentially a sequential collection of chars. In most cases, they
+    are used to contain text. To represent a string in code, use double quotation
+    marks. \n\n<color=#0000a0ff>bool</color> - Defines a boolean, which can be either
+    true or false in C#.\n\r\nTo declare a variable, you must provide a name and,
+    optionally, a value:\n\n<color=#0000a0ff>int</color> num = <color=#808000ff>42</color>; "
