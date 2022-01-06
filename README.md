@@ -2,6 +2,13 @@
  
 ### Change Log:
 
+Change Log - 06/01/2022 - Thomas & Harry
+- Added player name select panel to the main menu 
+- Added leaderboard to the main menu 
+- Completed game loop by adding a victory screen once all objectives have been completed 
+	- The game will then load the main menu again and add the player to the leaderboard if their score was high enough
+- Slight UI redesign to incorporate new features
+
 Change Log - 06/01/2022 - Thomas
 - Save volume between sessions using PlayerPrefs
 

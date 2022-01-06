@@ -12,13 +12,13 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField]
     private List<ObjectiveData> objectives;
     [SerializeField]
-    private TMPro.TextMeshProUGUI scoreText, questionText;
+    private TMPro.TextMeshProUGUI scoreText, questionText, victoryScoreText;
 
     private ConsoleManagerScript consoleManager;
     private CompilerScript compiler;
 
     [SerializeField]
-    private Canvas gameWindow, popupWindow, slidesWindow;
+    private Canvas gameWindow, popupWindow, slidesWindow, victoryWindow;
 
     private int score = 0;
     public int Score => score;
@@ -88,7 +88,8 @@ public class GameManagerScript : MonoBehaviour
         // Load next obj
         if (++questionNum >= objectives.Count)
         {
-            // TODO: End program, return to menu scene(?)
+            victoryWindow.enabled = true;
+            victoryScoreText.text = $"Your score: {Score}";
             return;
         }
 
@@ -105,5 +106,10 @@ public class GameManagerScript : MonoBehaviour
 
         slidesWindow.enabled = true;
         GetComponent<SlideManagerScript>().Init();
+    }
+    public void SetPlayerScore()
+    {
+        GameSettingsScript.PlayerScore = Score;
+        GameSettingsScript.GameCompleted = true;
     }
 }

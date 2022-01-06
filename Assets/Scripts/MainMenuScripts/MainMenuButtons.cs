@@ -19,10 +19,27 @@ public class MainMenuButtons : MonoBehaviour
     [SerializeField]
     private Toggle fullscreenToggle;
 
+    [SerializeField]
+    private TextMeshProUGUI playerNameText;
+    [SerializeField]
+    private Button playerNameSubmitButton;
+    [SerializeField]
+    private TMP_InputField playerNameInputField;
+    [SerializeField]
+    private GameObject playerNamePanel;
+
     Resolution[] resolutionsArray;
+
+    void Awake()
+    {
+        playerNameInputField.onValueChanged.AddListener(ValidateNameInput);
+    }
 
     void Start()
     {
+        if (GameSettingsScript.GameCompleted)
+            playerNamePanel.SetActive(false);
+
         fullscreenToggle.isOn = Screen.fullScreen;
         resolutionsArray = Screen.resolutions;
         resolutionDropdown.ClearOptions();
@@ -102,5 +119,15 @@ public class MainMenuButtons : MonoBehaviour
     {
         Resolution resolution = resolutionsArray[_resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
+
+    public void SetPlayerName()
+    {
+        GameSettingsScript.PlayerName = playerNameText.text;
+    }
+
+    private void ValidateNameInput(string input)
+    {
+        playerNameSubmitButton.interactable = !string.IsNullOrWhiteSpace(input);
     }
 }
