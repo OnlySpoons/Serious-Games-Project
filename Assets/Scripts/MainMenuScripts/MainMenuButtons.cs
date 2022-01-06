@@ -53,9 +53,12 @@ public class MainMenuButtons : MonoBehaviour
 
     void OnEnable()
     {
-        volumeSlider.value = GameSettingsScript.Volume;
         fullscreenToggle.isOn = GameSettingsScript.IsFullscreen;
 
+        if (PlayerPrefs.HasKey("Volume"))
+            GameSettingsScript.Volume = PlayerPrefs.GetFloat("Volume");
+
+        volumeSlider.value = GameSettingsScript.Volume;
         SetVolume(GameSettingsScript.Volume);
     }
 
@@ -79,6 +82,8 @@ public class MainMenuButtons : MonoBehaviour
     {
         audioMixer.SetFloat("VolumeParam", _volume);
         GameSettingsScript.Volume = volumeSlider.value;
+
+        PlayerPrefs.SetFloat("Volume", _volume);
     }
 
     public void SetQuality(int _qualityIndex)

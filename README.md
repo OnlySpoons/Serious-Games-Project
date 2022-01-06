@@ -2,6 +2,9 @@
  
 ### Change Log:
 
+Change Log - 06/01/2022 - Thomas
+- Save volume between sessions using PlayerPrefs
+
 Change Log - 05/01/2022 - Thomas 
 - Refactored UI for the whole project
 	- Gave the main menu and options menu its own background image in the main menu scene

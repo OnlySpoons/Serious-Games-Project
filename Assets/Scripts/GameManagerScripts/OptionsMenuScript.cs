@@ -53,8 +53,8 @@ public class OptionsMenuScript : MonoBehaviour
 
     void OnEnable()
     {
-        volumeSlider.value = GameSettingsScript.Volume;
         fullscreenToggle.isOn = GameSettingsScript.IsFullscreen;
+        volumeSlider.value = GameSettingsScript.Volume;
         SetVolume(GameSettingsScript.Volume);
     }
 
@@ -76,6 +76,9 @@ public class OptionsMenuScript : MonoBehaviour
     public void SetVolume(float _volume)
     {
         audioMixer.SetFloat("VolumeParam", _volume);
+        GameSettingsScript.Volume = volumeSlider.value;
+
+        PlayerPrefs.SetFloat("Volume", _volume);
     }
 
     public void SetQuality(int _qualityIndex)
