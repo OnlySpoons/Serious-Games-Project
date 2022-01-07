@@ -13,7 +13,7 @@ public class CompilerScript : MonoBehaviour
     private ScriptDomain domain = null;
     private ConsoleManagerScript consoleManager;
 
-    public void Init()
+    void Start()
     {
         consoleManager = GetComponent<ConsoleManagerScript>();
         domain = ScriptDomain.CreateDomain("MyDomain", true);
@@ -32,6 +32,11 @@ public class CompilerScript : MonoBehaviour
             output = e.ToString();
         }
 
+        foreach ( var error in domain.CompileResult.Errors )
+		{
+            consoleManager.WriteToOutput( $"Error { error.Code } on line { error.SourceLine + 1 } - { error.Message }" );
+		}
+
         return type;
     }
 
@@ -42,7 +47,7 @@ public class CompilerScript : MonoBehaviour
 
         ScriptProxy proxy = type.CreateInstance(gameObject);
 
-        var stringReader = new StringReader(GameManagerScript.CurrentObjective.Input);
+        var stringReader = new StringReader( ObjectiveManagerScript.CurrentObjective.Input );
         Console.SetIn(stringReader);
         var stringWriter = new StringWriter();
         Console.SetOut(stringWriter);
@@ -50,8 +55,8 @@ public class CompilerScript : MonoBehaviour
         proxy.Call("Main", new string[1]);
 
         var output = stringWriter.ToString().Trim('\r','\n');
-        consoleManager.WriteToOutput(output);
+        consoleManager.WriteToOutput( output );
 
-        return GameManagerScript.CurrentObjective.ExpectedOutput == output;
+        return ObjectiveManagerScript.CurrentObjective.ExpectedOutput == output;
     }
 }

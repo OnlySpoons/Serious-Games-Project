@@ -2060,6 +2060,7 @@ GameObject:
   - component: {fileID: 337126605}
   - component: {fileID: 337126607}
   - component: {fileID: 337126606}
+  - component: {fileID: 337126608}
   m_Layer: 5
   m_Name: SlideShowWindow
   m_TagString: Untagged
@@ -2148,6 +2149,23 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
+--- !u!114 &337126608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337126603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1317acb1b4ee534da0adcbf8ae56cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slideTitle: {fileID: 1028196279}
+  slideContents: {fileID: 1932172369}
+  nextButton: {fileID: 1041965917}
+  previousButton: {fileID: 1013497081}
+  finishButton: {fileID: 1692820845}
 --- !u!1 &355453972
 GameObject:
   m_ObjectHideFlags: 0
@@ -5336,7 +5354,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1670316228}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SlideManagerScript, Assembly-CSharp
         m_MethodName: LoadPreviousSlide
         m_Mode: 1
@@ -5847,7 +5865,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1670316228}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SlideManagerScript, Assembly-CSharp
         m_MethodName: LoadNextSlide
         m_Mode: 1
@@ -7095,8 +7113,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1670316228}
-        m_TargetAssemblyTypeName: SlideManagerScript, Assembly-CSharp
+      - m_Target: {fileID: 1670316222}
+        m_TargetAssemblyTypeName: GameManagerScript, Assembly-CSharp
         m_MethodName: OpenSlides
         m_Mode: 1
         m_Arguments:
@@ -9059,7 +9077,8 @@ GameObject:
   - component: {fileID: 1670316225}
   - component: {fileID: 1670316226}
   - component: {fileID: 1670316227}
-  - component: {fileID: 1670316228}
+  - component: {fileID: 1670316230}
+  - component: {fileID: 1670316229}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -9079,11 +9098,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 324ce5d019cb019489d5fc7eb9dab46b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectives:
-  - {fileID: 11400000, guid: 1e50e6634a5c44c4eaae95226c0e2892, type: 2}
-  scoreText: {fileID: 355453974}
-  questionText: {fileID: 713671359}
-  victoryScoreText: {fileID: 2001998146}
   gameWindow: {fileID: 407451746}
   popupWindow: {fileID: 1560742284}
   slidesWindow: {fileID: 337126605}
@@ -9160,7 +9174,7 @@ MonoBehaviour:
   qualityDropdown: {fileID: 1728750661}
   volumeSlider: {fileID: 1506009570}
   fullscreenToggle: {fileID: 276850351}
---- !u!114 &1670316228
+--- !u!114 &1670316229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9169,15 +9183,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1670316221}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1317acb1b4ee534da0adcbf8ae56cae, type: 3}
+  m_Script: {fileID: 11500000, guid: efd801c6a1050b64ab89986c3442cfa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slideCanvas: {fileID: 337126605}
-  slideTitle: {fileID: 1028196279}
-  slideContents: {fileID: 1932172369}
-  nextButton: {fileID: 1041965917}
-  previousButton: {fileID: 1013497081}
-  finishButton: {fileID: 1692820845}
+  scoreText: {fileID: 355453974}
+  victoryScoreText: {fileID: 1004970884}
+--- !u!114 &1670316230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670316221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e03e4ccc8df43d2458eda2282328d4cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveText: {fileID: 829625482}
+  objectives:
+  - {fileID: 11400000, guid: 1e50e6634a5c44c4eaae95226c0e2892, type: 2}
+  - {fileID: 11400000, guid: 3d810821d4482ce4e8fe428b681fbd3d, type: 2}
+  - {fileID: 11400000, guid: ff04d5737c9502c4693a3c9ec9153ecd, type: 2}
 --- !u!1 &1682236349
 GameObject:
   m_ObjectHideFlags: 0
@@ -9316,8 +9343,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1670316228}
-        m_TargetAssemblyTypeName: SlideManagerScript, Assembly-CSharp
+      - m_Target: {fileID: 1670316222}
+        m_TargetAssemblyTypeName: GameManagerScript, Assembly-CSharp
         m_MethodName: CloseSlides
         m_Mode: 1
         m_Arguments:
@@ -9969,9 +9996,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1670316222}
-        m_TargetAssemblyTypeName: GameManagerScript, Assembly-CSharp
-        m_MethodName: OnLoadNextObjective
+      - m_Target: {fileID: 1670316230}
+        m_TargetAssemblyTypeName: ObjectiveManagerScript, Assembly-CSharp
+        m_MethodName: LoadNextObjective
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

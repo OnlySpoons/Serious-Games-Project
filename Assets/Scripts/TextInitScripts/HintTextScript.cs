@@ -11,12 +11,12 @@ public class HintTextScript : MonoBehaviour
     private void OnEnable()
     {
         // Subscribes to onObjectiveChanged event
-        GameManagerScript.onObjectiveChanged += Init;
+        ObjectiveManagerScript.onObjectiveChanged += Init;
     }
     private void OnDisable()
     {
         // Unsubscribes from onObjectiveChanged event
-        GameManagerScript.onObjectiveChanged -= Init;
+        ObjectiveManagerScript.onObjectiveChanged -= Init;
     }
 
     void Init(ObjectiveData data)

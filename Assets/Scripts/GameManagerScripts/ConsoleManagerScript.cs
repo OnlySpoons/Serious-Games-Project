@@ -20,7 +20,7 @@ public class ConsoleManagerScript : MonoBehaviour
 
     void LogMessageReceived(string log, string stackTrace, LogType type)
     {
-        outputConsole.text += log + '\n';
+        //outputConsole.text += log + '\n';
     }
 
     public string ReadFromInput()
