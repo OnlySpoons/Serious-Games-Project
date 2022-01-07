@@ -4,6 +4,8 @@ using UnityEngine;
 using RoslynCSharp;
 using System.IO;
 using System;
+using System.Linq;
+using System.Reflection;
 
 public class CompilerScript : MonoBehaviour
 {
@@ -22,6 +24,7 @@ public class CompilerScript : MonoBehaviour
     public ScriptType Compile(string code)
     {
         ScriptType type = null;
+        output = string.Empty;
 
         try
         {
@@ -29,7 +32,7 @@ public class CompilerScript : MonoBehaviour
         }
         catch (Exception e)
         {
-            output = e.ToString();
+            consoleManager.WriteToOutput(e.ToString());
         }
 
         foreach ( var error in domain.CompileResult.Errors )
@@ -52,11 +55,24 @@ public class CompilerScript : MonoBehaviour
         var stringWriter = new StringWriter();
         Console.SetOut(stringWriter);
 
-        proxy.Call("Main", new string[1]);
+        try
+        {
+            proxy.Call("Main", new string[1]);
+        }
+        catch(TargetParameterCountException e)
+        {
+            consoleManager.WriteToOutput($"Error: No definition for Main(string[]).");
+            return false;
+        }
+        catch(Exception e)
+        {
+            consoleManager.WriteToOutput($"Exception at: {e.Message}");
+            return false;
+        }
 
-        var output = stringWriter.ToString().Trim('\r','\n');
+        output = stringWriter.ToString().Trim('\r','\n');
         consoleManager.WriteToOutput( output );
 
-        return ObjectiveManagerScript.CurrentObjective.ExpectedOutput == output;
+        return true;
     }
 }

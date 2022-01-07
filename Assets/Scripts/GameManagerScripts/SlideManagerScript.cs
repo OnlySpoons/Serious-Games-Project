@@ -31,6 +31,7 @@ public class SlideManagerScript : MonoBehaviour
         slideContents.text = data.Slides[ slideIndex].Contents;
 
         previousButton.gameObject.SetActive(false);
+        nextButton.gameObject.SetActive(true);
         finishButton.gameObject.SetActive(false);
     }
 

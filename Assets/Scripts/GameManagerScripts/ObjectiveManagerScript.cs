@@ -12,7 +12,7 @@ public class ObjectiveManagerScript : MonoBehaviour
     public static event OnVictoryAchieved onVictoryAchieved;
 
     [SerializeField]
-    private TextMeshProUGUI objectiveText;
+    private TextMeshProUGUI objectiveNumText;
 
     [SerializeField]
     private List<ObjectiveData> objectives;
@@ -27,7 +27,7 @@ public class ObjectiveManagerScript : MonoBehaviour
     {
         currentObjective = objectives[ 0 ];
 
-        objectiveText.text = $"Question {objectiveIndex + 1} of {objectives.Count}";
+        objectiveNumText.text = $"Question {objectiveIndex + 1} of {objectives.Count}";
 
         // Calls onObjectiveChanged event
         if ( onObjectiveChanged != null )
@@ -41,9 +41,11 @@ public class ObjectiveManagerScript : MonoBehaviour
         {
             if( onVictoryAchieved != null )
                 onVictoryAchieved();
+
+            return;
         }
 
-        objectiveText.text = $"Question {objectiveIndex + 1} of {objectives.Count}";
+        objectiveNumText.text = $"Question {objectiveIndex + 1} of {objectives.Count}";
 
         currentObjective = objectives[ objectiveIndex ];
 

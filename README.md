@@ -2,6 +2,12 @@
  
 ### Change Log:
 
+Change Log - 07/01/2022 - Thomas & Martin 
+- Various bug fixes 
+
+Change Log - 07/01/2022 - Martin
+- Refactored code
+
 Change Log - 06/01/2022 - Thomas & Harry
 - Added player name select panel to the main menu 
 - Added leaderboard to the main menu 

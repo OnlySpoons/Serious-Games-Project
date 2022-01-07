@@ -6,17 +6,20 @@ using UnityEngine.SceneManagement;
 public class PauseMenuScript : MonoBehaviour
 {
     [SerializeField]
-    private Canvas pauseMenu;
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            pauseMenu.enabled = !pauseMenu.enabled;
-    }
+    private Canvas pauseMenu, optionsMenu;
 
     public void OnContinue()
     {
         pauseMenu.enabled = false;
+    }
+
+    public void OnOptions()
+    {
+        optionsMenu.enabled = true;
+    }
+    public void OnBack()
+    {
+        optionsMenu.enabled = false;
     }
 
     public void OnExit()

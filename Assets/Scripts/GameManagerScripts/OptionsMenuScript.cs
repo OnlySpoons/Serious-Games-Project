@@ -7,9 +7,6 @@ using UnityEngine.Audio;
 public class OptionsMenuScript : MonoBehaviour
 {
     [SerializeField]
-    private Canvas optionsMenu;
-
-    [SerializeField]
     private AudioMixer audioMixer;
     [SerializeField]
     private TMP_Dropdown resolutionDropdown;
@@ -62,15 +59,6 @@ public class OptionsMenuScript : MonoBehaviour
     {
         GameSettingsScript.Volume = volumeSlider.value;
         GameSettingsScript.IsFullscreen = fullscreenToggle.isOn;
-    }
-
-    public void OnOptions()
-    {
-        optionsMenu.enabled = true;
-    }
-    public void OnBack()
-    {
-        optionsMenu.enabled = false;
     }
 
     public void SetVolume(float _volume)

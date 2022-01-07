@@ -33,6 +33,8 @@ public class ScoreManagerScript : MonoBehaviour
 	public void OnVictoryAchieved ()
 	{
 		victoryScoreText.text = $"Your score: { score }";
+		GameSettingsScript.PlayerScore = score;
+		GameSettingsScript.GameCompleted = true;
 	}
 
 }

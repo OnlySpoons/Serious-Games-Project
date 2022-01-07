@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objective: Delete system32
   input: 
-  expectedOutput: 
+  expectedOutput: 1
   hints:
   - kys
   - kyda

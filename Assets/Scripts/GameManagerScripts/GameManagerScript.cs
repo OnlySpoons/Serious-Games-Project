@@ -7,7 +7,7 @@ public class GameManagerScript : MonoBehaviour
     private ScoreManagerScript scoreManager;
 
     [SerializeField]
-    private Canvas gameWindow, popupWindow, slidesWindow, victoryWindow;
+    private Canvas gameWindow, pauseWindow, popupWindow, slidesWindow, victoryWindow;
 
 
     void Start()
@@ -33,6 +33,12 @@ public class GameManagerScript : MonoBehaviour
         ObjectiveManagerScript.onVictoryAchieved -= OnVictoryAchieved;
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            pauseWindow.enabled = !pauseWindow.enabled;
+    }
+
     public void OnRun()
     {
         // Clear output window
@@ -45,6 +51,7 @@ public class GameManagerScript : MonoBehaviour
         if (type is null)
         {
             consoleManager.WriteToOutput( compiler.output );
+            return;
         }
 
         // Run compiled code
@@ -52,8 +59,11 @@ public class GameManagerScript : MonoBehaviour
 
         // If correct, add score
         if (!correct)
+            return;
+
+        if(ObjectiveManagerScript.CurrentObjective.ExpectedOutput != compiler.output)
         {
-            consoleManager.WriteToOutput( "Output does not match expected output!" );
+            consoleManager.WriteToOutput("Output does not match expected output!");
             return;
         }
 
@@ -65,7 +75,6 @@ public class GameManagerScript : MonoBehaviour
 
         popupWindow.enabled = true;
         popupWindow.GetComponent<PopupScript>().Init( scoreToAdd, HintTextScript.HintsUsed );
-
     }
 
     public void OnObjectiveChanged(ObjectiveData data)

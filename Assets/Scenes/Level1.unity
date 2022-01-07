@@ -681,7 +681,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!224 &117797849
 RectTransform:
@@ -694,7 +694,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1214779218}
+  - {fileID: 578185470}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -873,7 +873,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1670316227}
+      - m_Target: {fileID: 1046565346}
         m_TargetAssemblyTypeName: OptionsMenuScript, Assembly-CSharp
         m_MethodName: SetResolution
         m_Mode: 0
@@ -1480,7 +1480,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1670316226}
+      - m_Target: {fileID: 1185286550}
         m_TargetAssemblyTypeName: PauseMenuScript, Assembly-CSharp
         m_MethodName: OnExit
         m_Mode: 1
@@ -1738,7 +1738,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1670316227}
+      - m_Target: {fileID: 1046565346}
         m_TargetAssemblyTypeName: OptionsMenuScript, Assembly-CSharp
         m_MethodName: SetFullscreen
         m_Mode: 0
@@ -3684,7 +3684,7 @@ RectTransform:
   - {fileID: 1004970883}
   - {fileID: 764161131}
   - {fileID: 2001998145}
-  m_Father: {fileID: 1214779218}
+  m_Father: {fileID: 117797849}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3813,8 +3813,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1670316227}
-        m_TargetAssemblyTypeName: OptionsMenuScript, Assembly-CSharp
+      - m_Target: {fileID: 1185286550}
+        m_TargetAssemblyTypeName: PauseMenuScript, Assembly-CSharp
         m_MethodName: OnBack
         m_Mode: 1
         m_Arguments:
@@ -4080,19 +4080,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1670316222}
-        m_TargetAssemblyTypeName: GameManagerScript, Assembly-CSharp
-        m_MethodName: SetPlayerScore
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1670316226}
+      - m_Target: {fileID: 1185286550}
         m_TargetAssemblyTypeName: PauseMenuScript, Assembly-CSharp
         m_MethodName: OnExit
         m_Mode: 1
@@ -5354,7 +5342,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 337126608}
         m_TargetAssemblyTypeName: SlideManagerScript, Assembly-CSharp
         m_MethodName: LoadPreviousSlide
         m_Mode: 1
@@ -5865,7 +5853,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 337126608}
         m_TargetAssemblyTypeName: SlideManagerScript, Assembly-CSharp
         m_MethodName: LoadNextSlide
         m_Mode: 1
@@ -5968,6 +5956,7 @@ GameObject:
   - component: {fileID: 1046565345}
   - component: {fileID: 1046565344}
   - component: {fileID: 1046565343}
+  - component: {fileID: 1046565346}
   m_Layer: 5
   m_Name: OptionsWindow
   m_TagString: Untagged
@@ -6054,8 +6043,25 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_TargetDisplay: 0
+--- !u!114 &1046565346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046565341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b08df1ab5df17f438433cadff186389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 296655d0a442fae4bb6b4bb6efbf3a43, type: 2}
+  resolutionDropdown: {fileID: 145920471}
+  qualityDropdown: {fileID: 1728750661}
+  volumeSlider: {fileID: 1506009570}
+  fullscreenToggle: {fileID: 276850351}
 --- !u!1 &1071891238
 GameObject:
   m_ObjectHideFlags: 0
@@ -6518,6 +6524,7 @@ GameObject:
   - component: {fileID: 1185286548}
   - component: {fileID: 1185286547}
   - component: {fileID: 1185286546}
+  - component: {fileID: 1185286550}
   m_Layer: 5
   m_Name: PauseWindow
   m_TagString: Untagged
@@ -6584,7 +6591,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_TargetDisplay: 0
 --- !u!224 &1185286549
 RectTransform:
@@ -6606,6 +6613,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1185286550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185286545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23b2a0e445a67b4c98620737196753d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 1185286548}
+  optionsMenu: {fileID: 1046565345}
 --- !u!1 &1191484417
 GameObject:
   m_ObjectHideFlags: 0
@@ -6740,82 +6761,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191484417}
   m_CullTransparentMesh: 0
---- !u!1 &1214779217
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1214779218}
-  - component: {fileID: 1214779220}
-  - component: {fileID: 1214779219}
-  m_Layer: 5
-  m_Name: Panel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1214779218
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1214779217}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 578185470}
-  m_Father: {fileID: 117797849}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1214779219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1214779217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.84313726}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1214779220
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1214779217}
-  m_CullTransparentMesh: 1
 --- !u!1 &1244725437
 GameObject:
   m_ObjectHideFlags: 0
@@ -7322,8 +7267,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1670316227}
-        m_TargetAssemblyTypeName: OptionsMenuScript, Assembly-CSharp
+      - m_Target: {fileID: 1185286550}
+        m_TargetAssemblyTypeName: PauseMenuScript, Assembly-CSharp
         m_MethodName: OnOptions
         m_Mode: 1
         m_Arguments:
@@ -8589,7 +8534,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1670316227}
+      - m_Target: {fileID: 1046565346}
         m_TargetAssemblyTypeName: OptionsMenuScript, Assembly-CSharp
         m_MethodName: SetVolume
         m_Mode: 0
@@ -9075,8 +9020,6 @@ GameObject:
   - component: {fileID: 1670316222}
   - component: {fileID: 1670316224}
   - component: {fileID: 1670316225}
-  - component: {fileID: 1670316226}
-  - component: {fileID: 1670316227}
   - component: {fileID: 1670316230}
   - component: {fileID: 1670316229}
   m_Layer: 0
@@ -9099,6 +9042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameWindow: {fileID: 407451746}
+  pauseWindow: {fileID: 1185286548}
   popupWindow: {fileID: 1560742284}
   slidesWindow: {fileID: 337126605}
   victoryWindow: {fileID: 117797848}
@@ -9143,37 +9087,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outputConsole: {fileID: 91623369}
   inputConsole: {fileID: 1121328406}
---- !u!114 &1670316226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670316221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b23b2a0e445a67b4c98620737196753d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1185286548}
---- !u!114 &1670316227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1670316221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b08df1ab5df17f438433cadff186389, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionsMenu: {fileID: 1046565345}
-  audioMixer: {fileID: 24100000, guid: 296655d0a442fae4bb6b4bb6efbf3a43, type: 2}
-  resolutionDropdown: {fileID: 145920471}
-  qualityDropdown: {fileID: 1728750661}
-  volumeSlider: {fileID: 1506009570}
-  fullscreenToggle: {fileID: 276850351}
 --- !u!114 &1670316229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9187,7 +9100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 355453974}
-  victoryScoreText: {fileID: 1004970884}
+  victoryScoreText: {fileID: 2001998146}
 --- !u!114 &1670316230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9200,11 +9113,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e03e4ccc8df43d2458eda2282328d4cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectiveText: {fileID: 829625482}
+  objectiveNumText: {fileID: 713671359}
   objectives:
   - {fileID: 11400000, guid: 1e50e6634a5c44c4eaae95226c0e2892, type: 2}
-  - {fileID: 11400000, guid: 3d810821d4482ce4e8fe428b681fbd3d, type: 2}
-  - {fileID: 11400000, guid: ff04d5737c9502c4693a3c9ec9153ecd, type: 2}
 --- !u!1 &1682236349
 GameObject:
   m_ObjectHideFlags: 0
@@ -9496,7 +9407,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1670316226}
+      - m_Target: {fileID: 1185286550}
         m_TargetAssemblyTypeName: PauseMenuScript, Assembly-CSharp
         m_MethodName: OnContinue
         m_Mode: 1
@@ -9653,7 +9564,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1670316227}
+      - m_Target: {fileID: 1046565346}
         m_TargetAssemblyTypeName: OptionsMenuScript, Assembly-CSharp
         m_MethodName: SetQuality
         m_Mode: 0

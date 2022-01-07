@@ -112,7 +112,6 @@ public class HighScoreTable : MonoBehaviour
         case 3:
             entryTransform.Find("TrophyImg").GetComponent<Image>().color = Utils.GetColorFromString("B76F56");
             break;
-
         }
 
         transformList.Add(entryTransform);

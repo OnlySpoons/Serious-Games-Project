@@ -37,7 +37,7 @@ public class MainMenuButtons : MonoBehaviour
 
     void Start()
     {
-        if (GameSettingsScript.GameCompleted)
+        if (!string.IsNullOrEmpty(GameSettingsScript.PlayerName))
             playerNamePanel.SetActive(false);
 
         fullscreenToggle.isOn = Screen.fullScreen;
