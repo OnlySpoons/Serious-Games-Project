@@ -2,6 +2,12 @@
  
 ### Change Log:
 
+Change Log - 08/01/2022
+- Fixed various spelling mistakes
+- Improved descriptions for some objectives
+- Removed meme songs, sadly
+- Added a wee surprise when you beat the game 
+
 Change Log - 08/01/2022 - Harry
 - Finished Objectives and Slides
 - Various bug fixes

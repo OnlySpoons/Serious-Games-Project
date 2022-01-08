@@ -17,9 +17,9 @@ MonoBehaviour:
   input: 8
   expectedOutput: 4
   hints:
-  - Both read and write will be necessary
+  - Both read and write functions will be necessary
   - If's require a comparitive operator
-  - You'll need to convert the input to an Int
+  - You'll need to convert the input to an int
   slides:
   - {fileID: 11400000, guid: edc2e3ae469806c40bd920022d9e393d, type: 2}
   - {fileID: 11400000, guid: 756f03f57af72e840ba2b6db757dc3a4, type: 2}

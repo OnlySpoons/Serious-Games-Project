@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 638248c7ccf9ee04f84013a84a63d13e, type: 3}
   m_Name: Objective2
   m_EditorClassIdentifier: 
-  objective: Combine 2 String together as a new String. String a should be "The Quick
-    Brown Fox jumps ", and string b should be "over The Lazy Dog
+  objective: Create two string variables A and B. Combine both values and output
+    the result to the console.  A should say "The Quick Brown Fox jumps ", B should
+    say "over The Lazy Dog".
   input: 
   expectedOutput: The Quick Brown Fox jumps over The Lazy Dog
   hints:
-  - Strings still need to have Quotes.
-  - Variables need semi-colon's.
-  - String myString = "...";
+  - Strings must have quotes surrounding them.
+  - Variable lines should end with semicolons.
+  - string myString = "...";
   slides:
   - {fileID: 11400000, guid: 079d53942d4b7b14cb8c6c5e78d7bf2d, type: 2}

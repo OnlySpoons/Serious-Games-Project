@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 638248c7ccf9ee04f84013a84a63d13e, type: 3}
   m_Name: Objective5
   m_EditorClassIdentifier: 
-  objective: Create a For Loop that loops 5 times. Print the step each time it Loops
+  objective: 'Create a For loop that loops 5 times. Inside the loop, print an integer
+    to the console which starts at 0. '
   input: 
   expectedOutput: '0
 
@@ -24,8 +25,8 @@ MonoBehaviour:
 
     4'
   hints:
-  - The loop condition needs a Parenthesis
-  - The Loop process needs Braces
+  - The loop condition needs parenthesis
+  - The loop process needs braces
   - for ( int ...; ...<5; ... ) {...}
   slides:
   - {fileID: 11400000, guid: ff3e517e8d012d943b63936de9486dd8, type: 2}

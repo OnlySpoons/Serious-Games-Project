@@ -37,6 +37,8 @@ public class MainMenuButtons : MonoBehaviour
 
     void Start()
     {
+        AudioManager.m_instance.StopPlaying("VictoryMusic");
+
         if (!string.IsNullOrEmpty(GameSettingsScript.PlayerName))
             playerNamePanel.SetActive(false);
 

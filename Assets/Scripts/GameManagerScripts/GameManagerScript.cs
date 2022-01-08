@@ -100,6 +100,10 @@ public class GameManagerScript : MonoBehaviour
 
     public void OnVictoryAchieved()
 	{
+        AudioManager.m_instance.StopPlaying("GameMusic");
+        AudioManager.m_instance.Play("VictoryMusic");
+
         victoryWindow.enabled = true;
+        victoryWindow.GetComponent<Canvas>().enabled = true;
     }
 }
