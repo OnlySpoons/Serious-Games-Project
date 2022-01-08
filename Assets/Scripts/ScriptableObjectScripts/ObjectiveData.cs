@@ -5,7 +5,9 @@ using UnityEngine;
 public class ObjectiveData : ScriptableObject
 {
 	[SerializeField]
-	private string objective, input, expectedOutput;
+	private string objective, input;
+	[SerializeField, TextArea(10, 50)]
+	private string expectedOutput;
 	[SerializeField]
 	private string[] hints = new string[3];
 	[SerializeField]

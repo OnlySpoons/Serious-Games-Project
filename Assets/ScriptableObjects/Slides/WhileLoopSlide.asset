@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510a493f6cb6dd2499cee5294b160755, type: 3}
+  m_Name: WhileLoopSlide
+  m_EditorClassIdentifier: 
+  slideTitle: 
+  slideContents: "While Loops are similar to For Loops, but are written differently
+    and are for a different purpose. In this case we only need to specify a condition
+    for the loop, and it will run until the condition is false, and will keep running
+    if the condition is true. This can be written as shown below:\n\n<color=#0000a0ff>while</color>
+    (condition)\n{\n  <color=#00d3d3d3>code block to be exectued;</color>\n}\n\nThere
+    is also the do/while version of this loop. This version will run the code block
+    first and then check the condition afterwards. An example is shown below:\n\n<color=#0000a0ff>do</color>\n{\n  
+    <color=#00d3d3d3>code block to be exectued;</color>\n}\n<color=#0000a0ff>while</color>
+    (condition)\n\nBelow is a proper example of a while loop is shown below:\n\n<color=#0000a0ff>while</color>
+    (<color=#00ffffff>y</color> < <color=#808000ff>3</color>)\n{\n   <color=green>Console</color>.<color=yellow>WriteLine</color>(<color=#00ffffff>y</color>)\n  
+    <color=#00ffffff>y++</color>;\n}"

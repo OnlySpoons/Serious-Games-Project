@@ -20,5 +20,11 @@ MonoBehaviour:
     \n\nOnce that's done, we can declare the following code inside our Main function:\n\n<color=green>Console</color>.<color=yellow>WriteLine</color>(<color=orange>\"Hello
     World!\"</color>);\n\nThe full stop after the Console allows us to access the
     WriteLine function, to which we provide a string with the text we want to print
-    out. \n\nNow you're ready to combine all of these techniques and create your
-    first program..."
+    out. \n\nwe can also use the ReadLine Function to take in an inout from the console,
+    though we do need to use it a bit differently.\n\n<color=#0000a0ff>string</color>
+    <color=#00ffffff>myString</color> = <color=green>Console</color>.<color=yellow>ReadLine</color>();\n\nOne
+    downside is you can only naturally read in a console value as a string, and you'll
+    need to convert it into a different format should you need it.\n\n<color=#0000a0ff>int</color>
+    <color=#00ffffff>myInt</color> = <color=green>Convert</color>.<color=yellow>ToInt32</color>(<color=green>Console</color>.<color=yellow>ReadLine</color>());\n\nThis
+    example converts the console value to an Int.\n\nNow you're ready to combine
+    all of these techniques and create your first program..."

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510a493f6cb6dd2499cee5294b160755, type: 3}
+  m_Name: ArithmeticOperatorsSlide
+  m_EditorClassIdentifier: 
+  slideTitle: Arithmetic Operators
+  slideContents: 'The Operators shown in the previous slide are specifically known
+    as Arithmetic Operators. There are also 3 more that are useful to know and understand,
+    which are:
+
+
+    % or Modulous - This return the division remainder. e.g. x %
+    y
+
+
+    ++ or Increment - This is used to increase a value by one. e.g. x++
+
+
+    --
+    or Decrement - This is used to decrease a value by one. e.g. x--'

@@ -54,6 +54,7 @@ public class CompilerScript : MonoBehaviour
         Console.SetIn(stringReader);
         var stringWriter = new StringWriter();
         Console.SetOut(stringWriter);
+        Console.Out.NewLine = "\n";
 
         try
         {
@@ -70,7 +71,7 @@ public class CompilerScript : MonoBehaviour
             return false;
         }
 
-        output = stringWriter.ToString().Trim('\r','\n');
+        output = stringWriter.ToString().Trim('\n');
         consoleManager.WriteToOutput( output );
 
         return true;

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slideTitle: Beware!
   slideContents: "There are three rules which should be followed when creating namespaces,
-    classes, and variables.\n\n1) They can only contain alphanumeric characters and
-    underscores. \n\n2) They must start with a letter or underscore. \n\n3) Avoid
-    using identifiers which match C#'s \"keywords\".  For example, creating a variable
-    with the name \"if\" would result in a compilation error. "
+    classes, and variables - which we will discuss in more detail later.\n\n1) They
+    can only contain alphanumeric characters and underscores. \n\n2) They must start
+    with a letter or underscore. \n\n3) Avoid using identifiers which match C#'s
+    \"keywords\".  For example, creating a variable with the name \"if\" would result
+    in a compilation error. "

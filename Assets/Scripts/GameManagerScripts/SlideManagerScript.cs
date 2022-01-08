@@ -33,6 +33,12 @@ public class SlideManagerScript : MonoBehaviour
         previousButton.gameObject.SetActive(false);
         nextButton.gameObject.SetActive(true);
         finishButton.gameObject.SetActive(false);
+
+        if (slideIndex == ObjectiveManagerScript.CurrentObjective.Slides.Count - 1)
+        {
+            nextButton.gameObject.SetActive(false);
+            finishButton.gameObject.SetActive(true);
+        }
     }
 
 	public void LoadNextSlide ()

@@ -2,6 +2,10 @@
  
 ### Change Log:
 
+Change Log - 08/01/2022 - Harry
+- Finished Objectives and Slides
+- Various bug fixes
+
 Change Log - 07/01/2022 - Thomas & Martin 
 - Various bug fixes 
 

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 638248c7ccf9ee04f84013a84a63d13e, type: 3}
+  m_Name: Objective5
+  m_EditorClassIdentifier: 
+  objective: Create a For Loop that loops 5 times. Print the step each time it Loops
+  input: 
+  expectedOutput: '0
+
+    1
+
+    2
+
+    3
+
+    4'
+  hints:
+  - The loop condition needs a Parenthesis
+  - The Loop process needs Braces
+  - for ( int ...; ...<5; ... ) {...}
+  slides:
+  - {fileID: 11400000, guid: ff3e517e8d012d943b63936de9486dd8, type: 2}
+  - {fileID: 11400000, guid: e6f4471519e03d94b9606ae006e859b6, type: 2}

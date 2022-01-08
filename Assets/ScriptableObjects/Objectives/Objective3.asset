@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 638248c7ccf9ee04f84013a84a63d13e, type: 3}
   m_Name: Objective3
   m_EditorClassIdentifier: 
-  objective: Suicide
+  objective: Create 3 Integer Variables, a, b and c, and print c to the cosole. C
+    should equal 42, which should be produced by using a and b
   input: 
-  expectedOutput: 
+  expectedOutput: 42
   hints:
-  - do anything
-  - just do it
-  - hurry up
+  - Multiplication is a *
+  - Division is a /
+  - a +-*/ b = c;
+  slides:
+  - {fileID: 11400000, guid: e4236d1c563697940a747458a643821b, type: 2}
+  - {fileID: 11400000, guid: 6fa513169f74cc944a4b7504cef97fa0, type: 2}

@@ -9116,6 +9116,10 @@ MonoBehaviour:
   objectiveNumText: {fileID: 713671359}
   objectives:
   - {fileID: 11400000, guid: 1e50e6634a5c44c4eaae95226c0e2892, type: 2}
+  - {fileID: 11400000, guid: 3d810821d4482ce4e8fe428b681fbd3d, type: 2}
+  - {fileID: 11400000, guid: ff04d5737c9502c4693a3c9ec9153ecd, type: 2}
+  - {fileID: 11400000, guid: 3d0d6ef78f3935544b857a257e277a08, type: 2}
+  - {fileID: 11400000, guid: 65150fae49ad20340bb3022c53e4e392, type: 2}
 --- !u!1 &1682236349
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510a493f6cb6dd2499cee5294b160755, type: 3}
+  m_Name: MathsSlide
+  m_EditorClassIdentifier: 
+  slideTitle: Maths
+  slideContents: 'We can use c# to perform mathematics just as we would with a calculator
+    though multiply and divide arent their usual symbols and are refered to as operators.
+    Each of these operators and their operations can be used as shown below:
+
+
+    Addition:
+
+    <color=#00ffffff>c</color>
+    = <color=#00ffffff>a</color> + <color=#00ffffff>b</color>;
+
+
+    Subtraction:
+
+    <color=#00ffffff>c</color>
+    = <color=#00ffffff>a</color> - <color=#00ffffff>b</color>;
+
+
+    Multiplication:
+
+    <color=#00ffffff>c</color>
+    = <color=#00ffffff>a</color> * <color=#00ffffff>b</color>;
+
+
+    Division:
+
+    <color=#00ffffff>c</color>
+    = <color=#00ffffff>a</color> / <color=#00ffffff>b</color>;
+
+
+    We can combine
+    these together and thankfully c# Inherently understands the order of operations
+    which helps simplify things. We can also still use Parenthesis to decide which
+    part of our expression happens first.
+
+
+    For example:
+
+    <color=#00ffffff>z</color>
+    = (<color=#00ffffff>a</color> * <color=#00ffffff>b</color> + (<color=#00ffffff>x</color>
+    - <color=#00ffffff>y</color>)) / <color=#00ffffff>c</color>;'

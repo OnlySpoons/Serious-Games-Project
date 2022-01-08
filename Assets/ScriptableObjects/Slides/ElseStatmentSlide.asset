@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510a493f6cb6dd2499cee5294b160755, type: 3}
+  m_Name: ElseStatmentSlide
+  m_EditorClassIdentifier: 
+  slideTitle: Else Statment
+  slideContents: "We can actually add aditional options to our If Statments, or rather
+    we can add other possibilites to our If's. There are two different ways we can
+    accomplish this. With either an Else, or an ElseIf. ElseIf lets us add a second
+    possible If to our if. Else is used when our condition falls outside the If or
+    ElseIf. For example:\n\n<color=#ff00ffff>If</color> (<color=#00ffffff>x</color>
+    == <color=#00ffffff>y</color>) \n{\n   <color=#00ffffff>z</color> = <color=#808000ff>2</color>;\n}\n<color=#ff00ffff>else
+    if</color> (<color=#00ffffff>x</color> < <color=#00ffffff>y</color>)\n{\n   <color=#00ffffff>z</color>
+    = <color=#808000ff>3</color>;\n}\n<color=#ff00ffff>else</color>\n{\n   <color=#00ffffff>z</color>
+    = <color=#808000ff>1</color>;\n}\n\nTo make clear, else is run if our condition
+    isn't met in either the If or the Else If."

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510a493f6cb6dd2499cee5294b160755, type: 3}
+  m_Name: IfStatmentSlide
+  m_EditorClassIdentifier: 
+  slideTitle: If Statment
+  slideContents: "One of the most useful things we have access to in C# is If Statments.
+    These allow us to add conditionals to our programs so they will perform certain
+    actions if they meet certain conditions. So if some value is equal to another,
+    then that certain section of code will be run. This can be written as shown below:\n\n<color=#ff00ffff>If</color>
+    (<color=#0000a0ff>x</color> == <color=#0000a0ff>y</color>) \n{\n       <color=green>Console</color>.<color=yellow>WriteLine</color>(<color=orange>\"Hello
+    World!\"</color>);\n}\n\nInside the If Statment, you will notice a double equals.
+    This is a Comparison Operator. In other words, it means \"equal to\" where a
+    single equals means \"equals\". There are other comparitive operators, which
+    we will cover in a future slide. If Statments use comparitive operators because
+    they are comparing data, rather than setting it - for the condition at least,
+    normal operators are used in the actual code."

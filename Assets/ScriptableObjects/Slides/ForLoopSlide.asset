@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510a493f6cb6dd2499cee5294b160755, type: 3}
+  m_Name: ForLoopSlide
+  m_EditorClassIdentifier: 
+  slideTitle: For Loop
+  slideContents: "This is our first look at Loops in C#. These are useful if we need
+    to run sections of code multiple times. There are two primary variations of Loops
+    in C#. For and While. For Loops run a set number of times equal to a value defined
+    in the Loops condition. While Loops are used to run while one value is within
+    another value or range. This slide will cover For Loops in more detail.\n\nLike
+    previously mentioned, For Loops run a set number of times. This is written as:\n\n<color=#0000a0ff>for</color>
+    ( <color=#00ffffff>statment a</color>; <color=#00ffffff>statment b</color>; <color=#00ffffff>statment
+    c</color>)\n{\n   <color=#00d3d3d3>code block to be executed;</color>\n}\n\nStatment
+    a occurs before the code block is executed. This only occurs once.\nStatment
+    b is the execution condition. This happens everytime.\nStatment c happens after
+    the code block is exectued. This happens everytime\n\nAn example of a completed
+    For Loop is shown below:\n\nfor ( int <color=#00ffffff>i</color> = <color=#808000ff>0</color>;
+    <color=#00ffffff>i</color> < <color=#808000ff>3</color>; <color=#00ffffff>i++</color>)\n{\n  
+    <color=green>Console</color>.<color=yellow>WriteLine</color>(<color=#00ffffff>i</color>);\n}\n\nThis
+    section runs 3 times, and prints 0, 1 and 2."

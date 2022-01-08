@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 638248c7ccf9ee04f84013a84a63d13e, type: 3}
   m_Name: Objective2
   m_EditorClassIdentifier: 
-  objective: Delete system32
+  objective: Combine 2 String together as a new String. String a should be "The Quick
+    Brown Fox jumps ", and string b should be "over The Lazy Dog
   input: 
-  expectedOutput: 1
+  expectedOutput: The Quick Brown Fox jumps over The Lazy Dog
   hints:
-  - kys
-  - kyda
-  - kymaw
+  - Strings still need to have Quotes.
+  - Variables need semi-colon's.
+  - String myString = "...";
   slides:
-  - {fileID: 11400000, guid: 2796343b7df93f3459fcfa57c05a9c68, type: 2}
-  - {fileID: 11400000, guid: 2cb570f0119358449823ce0f51849b79, type: 2}
+  - {fileID: 11400000, guid: 079d53942d4b7b14cb8c6c5e78d7bf2d, type: 2}

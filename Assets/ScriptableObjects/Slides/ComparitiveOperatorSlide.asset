@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510a493f6cb6dd2499cee5294b160755, type: 3}
+  m_Name: ComparitiveOperatorSlide
+  m_EditorClassIdentifier: 
+  slideTitle: Comparitive Operators
+  slideContents: 'We''ve already seen the "equal to" Operator in the If Statment
+    slide. We will now go over more of those here. We can use Comparitive operators
+    to compare variable or other pieces of data against each other. The rest of which
+    are shown below:
+
+
+    != or Not Equal To - This operator is used to see if pieces
+    of data do not match each other. e.g. x != y
+
+
+    > or Greater Than - This operator
+    is used to see if one piece of data is bigger than another. e.g. x > y
+
+
+    <
+    or Less Than - This operator is the opposite of the previous, seeing if one piece
+    of data is less than another. e.g. x < y
+
+
+    An equals sign can also be placed
+    in front of either of the last two operators to also check if the value is equal
+    to it. e.g. x >= y is "Is x greater than or equal to y?"'
