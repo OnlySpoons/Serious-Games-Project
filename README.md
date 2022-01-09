@@ -2,9 +2,16 @@
  
 ### Change Log:
 
+Change Log - 09/01/2022 - Martin & Thomas
+- Changed all objectives
+- Added slides
+
+Change Log - 09/01/2022 - Thomas
+- Fixed typo in objective 3
+
 Change Log - 09/01/2022 - Martin
 - Updated 4th objective
-- Updated/Added New Slides
+- Updated/added new slides
 
 Change Log - 09/01/2022 - Thomas & Martin 
 - Fixed bug with resolution dropdown array creation
