@@ -7,28 +7,46 @@ using UnityEngine.Video;
 
 public class StreamVideo : MonoBehaviour
 {
-    public RawImage img;
-    public VideoPlayer vid;
+    public RawImage videoScreen;
+    public VideoPlayer videoPlayer;
+    public AudioSource audioSource;
 
-    [SerializeField]
-    private Canvas victoryWindow;
+    void OnEnable()
+    {
+        ObjectiveManagerScript.onVictoryAchieved += StartVideo;
+    }
+
+    void OnDisable()
+    {
+        ObjectiveManagerScript.onVictoryAchieved -= StartVideo; 
+    }
 
     void Update()
     {
-        if (victoryWindow.GetComponent<Canvas>().enabled == true)
-            StartCoroutine(PlayVideo());
+        audioSource.volume = GameSettingsScript.Volume;
+        Debug.Log($"AS vol {audioSource.volume.ToString()}");
+        Debug.Log($"GS vol {GameSettingsScript.Volume}");
+    }
+
+    void StartVideo()
+    {
+        audioSource.volume = GameSettingsScript.Volume;
+
+        StartCoroutine(PlayVideo());
     }
 
     IEnumerator PlayVideo()
     {
-        vid.Prepare();
+        videoPlayer.Prepare();
+
         int i = 0;
-        while(!vid.isPrepared)
+
+        while(!videoPlayer.isPrepared)
         {
             yield return i;
         }
-        img.texture = vid.texture;
-        vid.Play();
-        //aud.Play();
+
+        videoScreen.texture = videoPlayer.texture;
+        videoPlayer.Play();
     }
 }

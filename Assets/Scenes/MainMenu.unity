@@ -4144,13 +4144,6 @@ MonoBehaviour:
     m_loop: 1
     m_source: {fileID: 0}
     m_group: {fileID: 24300002, guid: 296655d0a442fae4bb6b4bb6efbf3a43, type: 2}
-  - m_clip: {fileID: 8300000, guid: 60d4c34441ee5c64bb767a8ea3c3ac4e, type: 3}
-    m_volume: 0
-    m_pitch: 1
-    m_name: VictoryMusic
-    m_loop: 1
-    m_source: {fileID: 0}
-    m_group: {fileID: 24300002, guid: 296655d0a442fae4bb6b4bb6efbf3a43, type: 2}
 --- !u!4 &973538807
 Transform:
   m_ObjectHideFlags: 0
@@ -7143,8 +7136,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 73751562}
   m_HandleRect: {fileID: 673543744}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
+  m_MinValue: 0.0001
+  m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:

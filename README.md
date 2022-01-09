@@ -2,6 +2,9 @@
  
 ### Change Log:
 
+Change Log - 09/01/2022 - Thomas & Martin
+- Fixed bug with volume not applying to victory video
+
 Change Log - 09/01/2022 - Martin
 - Fixed issue with victory screen canvas size
 

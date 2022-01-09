@@ -64,7 +64,7 @@ public class OptionsMenuScript : MonoBehaviour
 
     public void SetVolume(float _volume)
     {
-        audioMixer.SetFloat("VolumeParam", _volume);
+        audioMixer.SetFloat("VolumeParam", Mathf.Log10(_volume) * 40);
         GameSettingsScript.Volume = volumeSlider.value;
 
         PlayerPrefs.SetFloat("Volume", _volume);

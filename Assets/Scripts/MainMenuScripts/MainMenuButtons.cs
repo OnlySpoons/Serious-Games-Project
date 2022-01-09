@@ -38,8 +38,6 @@ public class MainMenuButtons : MonoBehaviour
 
     void Start()
     {
-        AudioManager.m_instance.StopPlaying("VictoryMusic");
-
         if (!string.IsNullOrEmpty(GameSettingsScript.PlayerName))
             playerNamePanel.SetActive(false);
 
@@ -100,7 +98,7 @@ public class MainMenuButtons : MonoBehaviour
 
     public void SetVolume(float _volume)
     {
-        audioMixer.SetFloat("VolumeParam", _volume);
+        audioMixer.SetFloat("VolumeParam", Mathf.Log10(_volume) * 40);
         GameSettingsScript.Volume = volumeSlider.value;
 
         PlayerPrefs.SetFloat("Volume", _volume);

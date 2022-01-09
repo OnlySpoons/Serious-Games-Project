@@ -34,7 +34,5 @@ public class ScoreManagerScript : MonoBehaviour
 	{
 		victoryScoreText.text = $"Your score: { score }";
 		GameSettingsScript.PlayerScore = score;
-		GameSettingsScript.GameCompleted = true;
 	}
-
 }
