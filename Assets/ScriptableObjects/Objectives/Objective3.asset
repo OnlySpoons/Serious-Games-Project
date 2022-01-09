@@ -20,7 +20,7 @@ MonoBehaviour:
   hints:
   - Multiplication uses *
   - Division uses /
-  - a [+ or - or */] b = c;
+  - a [+ or - or * or /] b = c;
   slides:
   - {fileID: 11400000, guid: e4236d1c563697940a747458a643821b, type: 2}
   - {fileID: 11400000, guid: 6fa513169f74cc944a4b7504cef97fa0, type: 2}
