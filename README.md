@@ -2,6 +2,14 @@
  
 ### Change Log:
 
+Change Log - 09/01/2022 - Thomas
+- Changed various build settings 
+	- Disabled resizable window to prevent UI jankness 
+	- Enabled force single isntance
+	- Disabled player log
+	- Renamed project to "CSharp For Dafties"
+	- Enabled HDR for supported screens 
+
 Change Log - 09/01/2022 - Martin & Thomas
 - Changed all objectives
 - Added slides
