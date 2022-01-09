@@ -2,6 +2,9 @@
  
 ### Change Log:
 
+Change Log - 09/01/2022 - Martin
+- Fixed issue with victory screen canvas size
+
 Change Log - 09/01/2022 - Thomas
 - Changed various build settings 
 	- Disabled resizable window to prevent UI jankness 
