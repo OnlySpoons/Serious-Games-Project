@@ -2,6 +2,10 @@
  
 ### Change Log:
 
+Change Log - 09/01/2022 - Martin
+- Updated 4th objective
+- Updated/Added New Slides
+
 Change Log - 09/01/2022 - Thomas & Martin 
 - Fixed bug with resolution dropdown array creation
 
