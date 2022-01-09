@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 638248c7ccf9ee04f84013a84a63d13e, type: 3}
   m_Name: Objective2
   m_EditorClassIdentifier: 
-  objective: Create two string variables A and B. Combine both values and output
-    the result to the console.  A should say "The Quick Brown Fox jumps ", B should
-    say "over The Lazy Dog".
-  input: 
-  expectedOutput: The Quick Brown Fox jumps over The Lazy Dog
+  objective: Read two strings from input, and return the concatenation of those two
+    strings.
+  input: "The quick brown fox \njumps over the lazy dog"
+  expectedOutput: The quick brown fox jumps over the lazy dog
   hints:
-  - Strings must have quotes surrounding them.
-  - Variable lines should end with semicolons.
-  - string myString = "...";
+  - Remember to use Console.ReadLine.
+  - The input from Console.ReadLine can be stored in a variable
+  - Remember how to concatenate strings.
   slides:
   - {fileID: 11400000, guid: 079d53942d4b7b14cb8c6c5e78d7bf2d, type: 2}
+  - {fileID: 11400000, guid: 833a9bbef59cd7245ae66f090f7159f5, type: 2}

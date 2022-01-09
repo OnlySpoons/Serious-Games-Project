@@ -12,5 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 510a493f6cb6dd2499cee5294b160755, type: 3}
   m_Name: ConversionSlide
   m_EditorClassIdentifier: 
-  slideTitle: 
-  slideContents: 
+  slideTitle: String Parsing
+  slideContents: 'Each type in C# has its own Parse function for converting strings
+    to that type. For instance:
+
+
+    <color=#0000a0ff>int</color> <color=#00ffffff>num</color>
+    = <color=#0000a0ff>int</color>.<color=yellow>Parse</color>( <color=orange>"42"</color>
+    );
+
+
+    <color=#0000a0ff>float</color> <color=#00ffffff>num2</color> = <color=#0000a0ff>float</color>.<color=yellow>Parse</color>(<color=orange>"3.1415"</color>);
+
+
+    This
+    can be useful when reading input from the console or a file.'

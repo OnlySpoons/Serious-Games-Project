@@ -29,4 +29,5 @@ MonoBehaviour:
     are used to contain text. To represent a string in code, use double quotation
     marks. \n\n<color=#0000a0ff>bool</color> - Defines a boolean, which can be either
     true or false in C#.\n\r\nTo declare a variable, you must provide a name and,
-    optionally, a value:\n\n<color=#0000a0ff>int</color> num = <color=#808000ff>42</color>; "
+    optionally, a value:\n\n<color=#0000a0ff>int</color> <color=#00ffffff>num</color>
+    = <color=#808000ff>42</color>; "

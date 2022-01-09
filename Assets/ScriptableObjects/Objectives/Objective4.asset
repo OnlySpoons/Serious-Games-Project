@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 638248c7ccf9ee04f84013a84a63d13e, type: 3}
   m_Name: Objective4
   m_EditorClassIdentifier: 
-  objective: Read from input and return "Even" or "Odd" depending on the value.
+  objective: Read an integer from input and output "Even" or "Odd" depending on the
+    value.
   input: 8
   expectedOutput: Even
   hints:
-  - Both read and write functions will be necessary
-  - If's require a comparitive operator
-  - You'll need to convert the input to an int
+  - Remember to convert the input to an integer.
+  - if statements require a condition, remember to use comparison operators.
+  - The modulus operator can get the remainder of a division by 2.
   slides:
   - {fileID: 11400000, guid: edc2e3ae469806c40bd920022d9e393d, type: 2}
   - {fileID: 11400000, guid: 756f03f57af72e840ba2b6db757dc3a4, type: 2}

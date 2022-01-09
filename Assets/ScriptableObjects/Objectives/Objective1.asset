@@ -16,9 +16,9 @@ MonoBehaviour:
   input: 
   expectedOutput: Hello World!
   hints:
-  - Remember namespace.
-  - Remember class.
-  - Console.WriteLine
+  - Remember to declare a class.
+  - Remember to define Main(string[] args).
+  - Remember to use Console.WriteLine.
   slides:
   - {fileID: 11400000, guid: 1e9e9aa049b42dc4b9779f2a32f7eb32, type: 2}
   - {fileID: 11400000, guid: 5b1a4df2d8f45c14686abd484bcf4c60, type: 2}
