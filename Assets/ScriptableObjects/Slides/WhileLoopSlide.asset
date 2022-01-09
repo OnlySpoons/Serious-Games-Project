@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 510a493f6cb6dd2499cee5294b160755, type: 3}
   m_Name: WhileLoopSlide
   m_EditorClassIdentifier: 
-  slideTitle: 
+  slideTitle: While Loops
   slideContents: "While Loops are similar to For Loops, but are written differently
     and are for a different purpose. In this case we only need to specify a condition
     for the loop, and it will run until the condition is false, and will keep running

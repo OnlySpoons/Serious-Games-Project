@@ -2,6 +2,9 @@
  
 ### Change Log:
 
+Change Log - 09/01/2022 - Thomas & Martin 
+- Fixed bug with resolution dropdown array creation
+
 Change Log - 08/01/2022
 - Fixed various spelling mistakes
 - Improved descriptions for some objectives

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 510a493f6cb6dd2499cee5294b160755, type: 3}
   m_Name: ForLoopSlide
   m_EditorClassIdentifier: 
-  slideTitle: For Loop
+  slideTitle: For Loops
   slideContents: "This is our first look at Loops in C#. These are useful if we need
     to run sections of code multiple times. There are two primary variations of Loops
     in C#. For and While. For Loops run a set number of times equal to a value defined

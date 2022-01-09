@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 public class MainMenuButtons : MonoBehaviour
 {
@@ -43,7 +44,7 @@ public class MainMenuButtons : MonoBehaviour
             playerNamePanel.SetActive(false);
 
         fullscreenToggle.isOn = Screen.fullScreen;
-        resolutionsArray = Screen.resolutions;
+        resolutionsArray = Screen.resolutions.Where(resolution => resolution.refreshRate == 60).ToArray();
         resolutionDropdown.ClearOptions();
 
         List<string> optionsTemp = new List<string>();

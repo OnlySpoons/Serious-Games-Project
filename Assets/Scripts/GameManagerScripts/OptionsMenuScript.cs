@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using System.Linq;
 
 public class OptionsMenuScript : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class OptionsMenuScript : MonoBehaviour
 
     void Start()
     {
-        resolutionsArray = Screen.resolutions;
+        resolutionsArray = Screen.resolutions.Where(resolution => resolution.refreshRate == 60).ToArray();
         resolutionDropdown.ClearOptions();
 
         List<string> optionsTemp = new List<string>();
